@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
- /**
-  * *malloc_checked - allocates memory using malloc
-  * @b: memory size
-  * Return: a pointer to the alocated memory
-  * terminate with a status value of 98 on failure
+/**
+ * *malloc_checked - allocates memory using malloc
+ * @b: memory size
+ * Return: a pointer to allocated memory
  */
+
 
 void *malloc_checked(unsigned int b)
 {
