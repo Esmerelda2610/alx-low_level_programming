@@ -1,9 +1,27 @@
-		global main
-		extern printf
-	main:
- 		mov edi, format
-		xor eax, eax
-		call printf
-		mov eax, 0
-		ret
-	format: db 'Hello, Holberton\n',0
+	SECTION .text
+
+	global main
+	extern printf
+main:
+	push rbp
+
+	; prepare arguments for printf
+	mov rdi, format
+	mov rsi, message
+	mov rax,0
+
+	; call printf
+	call printf
+
+	pop rbp
+
+	; Return from main
+	mov rax, 0
+	ret
+
+	SECTION .data
+message: db "Hello, Holberton", 0
+format: db "%s", 10, 0
+
+
+
