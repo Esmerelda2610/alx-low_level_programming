@@ -8,19 +8,35 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *prev = NULL;
-	listint_t *next = NULL;
 
-	while (*head)
+	listint_t *temp, *temp2;
+	unsigned int i;
+
+	temp = *head;
+
+	if (*head == NULL)
+		return (-1);
+
+	if (index == 0)
 	{
-		next = (*head)->next;
-		(*head)->next = prev;
-		prev = *head;
-		*head = next;
+		*head = temp->next;
+		free(temp);
+
+		return (1);
 	}
 
-	*head = prev;
+	for (i = 0; (i < index - 1 && temp != NULL); i++)
+	{
+		temp = temp->next;
+	}
 
-	return (*head);
+	if (i != (index - 1) || temp->next == NULL)
+		return (-1);
+	/* make the prvious node points to the next one after delete */
+	temp2 = temp->next;
+	temp->next = temp->next->next;
+	free(temp2);
+
+	return (1);
 
 }
