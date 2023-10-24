@@ -9,21 +9,33 @@
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new;
-	listint_t *temp = *hed;
+	
+	listint_t *intNode, *temp;
 
-	new->n = n;
-	new->next = NULL;
+	/* create new node */
+	intNode = malloc(sizeof(listint_t));
+	if (intNode == NULL)
+		return (NULL);
 
+	/* fill the node with elements */
+	intNode->n = n;
+	intNode->next = NULL;
+
+	/* if the list is empty */
 	if (*head == NULL)
+		*head = intNode;
+	else
 	{
-		*head = new;
-		return (new);
+		/* walk though the list */
+		temp = *head;
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		/* make the last element point to the new node */
+		temp->next = intNode;
 	}
 
-	while (temp->next = new;
-
-	return (new);
-
+	return (intNode);
 }
 
