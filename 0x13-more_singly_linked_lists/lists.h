@@ -1,10 +1,10 @@
-#ifndef lists_h
-#define lists_h
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include <string.h>
+#include <strings.h>
 
 /**
  * struct listint_s - singly linked list
