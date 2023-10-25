@@ -1,4 +1,4 @@
-#includ "lists.h"
+#include "lists.h"
 
 /**
  * delete_nodeint_at_index - deletes node in a linked list at a certain index
