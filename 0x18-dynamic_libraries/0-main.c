@@ -4,7 +4,7 @@
 
 /**
  * main - check the code
-i bbbbbbbbbi *
+ *
  * Return: Always EXIT_SUCCESS.
  */
 int main(void)
