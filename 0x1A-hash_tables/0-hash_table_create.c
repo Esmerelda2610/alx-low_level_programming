@@ -1,8 +1,3 @@
-/*
- * File: 0-hash_table_create.c
- * Auth: Elizabeth Motsinone
- */
-
 #include "hash_tables.h"
 
 /**
