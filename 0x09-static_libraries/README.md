@@ -1,1 +1,1 @@
-README.md " A library is not a luxury but one of the necessities of life"
+Static libraries
