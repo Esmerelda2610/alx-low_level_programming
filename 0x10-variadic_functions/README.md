@@ -1,1 +1,1 @@
-0x10. C - Variadic functions
+to be the value of a variable
